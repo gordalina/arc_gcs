@@ -99,6 +99,7 @@ defmodule Arc.Storage.GCS do
 
     insert_opts =
       case obj.acl do
+        nil -> []
         false -> []
         acl -> [predefinedAcl: acl]
       end
